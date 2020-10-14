@@ -1,0 +1,58 @@
+
+{% load socialaccount %}
+{% providers_media_js %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+.fa {
+  padding: 40px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-github {
+  background:black;
+  color: white;
+}
+
+
+</style>
+
+</head>
+<body>
+    <h4>Sign in with the following options : </h4><hr>
+    <ul>
+    <a href="{% provider_login_url "facebook" method="js_sdk" %}" class="fa fa-facebook"></a>
+    <a href="{% provider_login_url "github" method="js_sdk" %}" class="fa fa-github"></a>
+    <a href="{% provider_login_url "twitter" method="js_sdk" %}" class="fa fa-twitter"></a>
+    <a href="{% provider_login_url "google" method="js_sdk" %}" class="fa fa-google"></a>
+</ul>
+</body>
+</html>

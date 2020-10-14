@@ -1,0 +1,10 @@
+{% load socialaccount %}
+<div class="name" style="color: cornflowerblue;">
+  <h1>Success ! Welcome, {{user.socialaccount_set.all.0.extra_data.name}}</h1>
+</div>
+<div class="picture">
+  <img src="{{user.socialaccount_set.all.0.extra_data.picture}}" alt="" />
+</div>
+<div class="id" style="color: crimson;">
+  <h1>Success ! id# : {{user.socialaccount_set.all.0.extra_data.id}}</h1>
+</div>
